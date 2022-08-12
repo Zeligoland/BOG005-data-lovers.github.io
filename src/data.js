@@ -7,3 +7,5 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+// Aquí va la lógica de ordenar la información

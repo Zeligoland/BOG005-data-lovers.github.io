@@ -3,4 +3,6 @@ import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
+// Aquí van todos los elementos del DOM
+
 console.log(example, data);
