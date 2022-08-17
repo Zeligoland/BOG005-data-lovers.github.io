@@ -12,8 +12,11 @@ getMovies();
 const showData = (data) => {
   console.log(data);
   let body = "";
+   
   for (let i = 0; i < data.length; i++) {
-    body += `<tr><td>${data[i].poster}</td><td>${data[i].title}</td>
+    let img = data[i].poster;
+    console.log(img)
+        body += `<tr><td>${data[i].poster}</td><td>${data[i].title}</td>
     <td>${data[i].description}</td><td>${data[i].director}</td><td>${data[i].producer}</td>
     </tr>`;
   }
