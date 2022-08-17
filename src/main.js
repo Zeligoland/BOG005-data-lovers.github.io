@@ -1,7 +1,5 @@
-// import { getMovies() } from './data.js';
-// import data from './data/lol/lol.js';
-// import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import {response} from './data.js';
+
 // Aquí van todos los elementos del DOM
 
 

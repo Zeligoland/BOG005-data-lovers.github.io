@@ -6,6 +6,18 @@
   box-sizing: border-box; /*Para que los elementos no salgan del contenedor*/
 }
 
+.tableCont{
+  display: grid;
+  margin-top: 4;
+  background: body;
+}
+
+.table thead{
+  background-color: #000000;
+  color: white;
+}
+
+
 nav {
   background: #ffffff;
   height: 88px;
