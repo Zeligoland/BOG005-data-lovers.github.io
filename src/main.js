@@ -3,22 +3,18 @@
 // import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // Aquí van todos los elementos del DOM
-function traerDatos(){
-    fetch('./data/ghibli/ghibli.json')
-    .then (respuesta => respuesta.json() ) // formato en el que se desea obtener la información
-    .then (respuesta => console.log(respuesta));
-    // .then (films => films.forEach(element => {
-        
-    };
 
-   // .then (datos => {
-    //    datos.forEach(dato => {
-     //   console.log(dato);
-  //  });
+async function getMovies(){
+   const response = await fetch('./data/ghibli/ghibli.json')
+   .then((response) => response.json())
+   .then((data) => {
+      let movies = data.films;
+      movies.forEach((Element) => {
+         console.log(Element);
+      });
+   });
+   return response;
+}
 
-//    })
-     // consolear información en formato
-  
-  
-  traerDatos();
+getMovies();
 
