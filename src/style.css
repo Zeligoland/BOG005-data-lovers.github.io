@@ -6,6 +6,10 @@
   box-sizing: border-box; /*Para que los elementos no salgan del contenedor*/
 }
 
+.films-container{
+  display: flex;
+}
+
 .tableCont{
   display: grid;
   margin-top: 4;

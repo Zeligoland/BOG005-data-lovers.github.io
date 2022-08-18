@@ -1,3 +1,8 @@
+
+
+
+/* 
+Comentando función asíncrona y publicación para pruebas
 async function getMovies() {
   const response = await fetch("./data/ghibli/ghibli.json")
     .then((response) => response.json())
@@ -22,6 +27,7 @@ const showData = (data) => {
   }
   document.getElementById("data").innerHTML = body;
 };
+*/
 
 export const response = () => {
   return "response";
