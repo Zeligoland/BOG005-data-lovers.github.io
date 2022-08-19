@@ -31,9 +31,10 @@ function createCard(){
           />
           <div class="cardText">
             <h2 class="filmTitle">${fullTitles[i]}</h2>
+            <h5 class="releaseDate">${fullReleases[i]}</h5>
             <p class="filmDescription">${fullDescriptions[i]}
             </p>
-            <h5 class="releaseDate">${fullReleases[i]}</h5>
+            
           </div>
         </div>
     `;
