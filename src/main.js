@@ -116,5 +116,5 @@ function showGhibliMatch() {
 setData();
 showMovies();
 
-// console.log(example);
+// SORT FUNCTION
 
