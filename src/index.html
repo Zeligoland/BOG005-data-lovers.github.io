@@ -35,20 +35,13 @@
       </ul>
     </nav>
 
-    <section class="welcome"></section>
+    <section class="welcome">
+      <!--contains banner-->
+    </section>
+   
 
-    <div class="filterContainer">
-      <h2>Ordena las películas</h2>
-      <select id="orderedOption">
-        <option id= 'option' value="fromAToZ">Ordenar de A a Z</option>
-        <option value="fromZToA">Ordenar de Z a A</option>
-      </select>
-    </div>
-
-
-    <main class="main">
-      <!--<button id="sortByT">Ordenar por título</button>-->
-      <p class="moviesWelcome">
+      <main id="main" class="main">
+       <p class="moviesWelcome">
         Aquí encontrarás la información que necesitas sobre las animaciones de
         Studio Ghibli, <b>que son un total de 20.</b>
         <br />
@@ -56,6 +49,11 @@
         <br />
         ¡Vamos alla! 🏯
       </p>
+    <div id="Sortbuttons">
+        <h2>Ordena las películas</h2>
+      <button id="sortByT">Ordenar de la A a la Z</button>
+      <button id="sortByT2">Ordenar de la Z a la A</button>
+    </div>
       <div class="cardContainer"></div>
     </main>
 
