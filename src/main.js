@@ -7,7 +7,7 @@ const characters = [];
 const locations = [];
 const vehicles = [];
 /*Separación*/
-const moviesHtml = [];
+
 const charactersHtml = [];
 const locationsHtml = [];
 const vehiclesHtml = [];
@@ -21,7 +21,8 @@ const locationsMenu = document.getElementById("locations");
 const vehiclesMenu = document.getElementById("vehicles");
 const ghibliMatchMenu = document.getElementById("ghibliMatch");
 
-moviesMenu.addEventListener("click", showMovies);
+
+// moviesMenu.addEventListener("click", showMovies);
 charactersMenu.addEventListener("click", showCharacters);
 locationsMenu.addEventListener("click", showLocations);
 vehiclesMenu.addEventListener("click", showVehicles);
@@ -31,7 +32,7 @@ let container = document.querySelector(".cardContainer");
 
 function setData() {
   for (let i = 0; i < moviesData.length; i++) {
-    moviesHtml.push(`
+    /*moviesHtml.push(`
         <div class="card">
           <img
             src="${moviesData[i].poster}"
@@ -45,7 +46,7 @@ function setData() {
             </p>
           </div>
         </div>
-    `);
+    `);*/
 
     moviesData[i].people.forEach((p) => {
       charactersHtml.push(`
@@ -94,12 +95,13 @@ function setData() {
     `);
       vehicles.push(v);
     });
+
   }
 }
 
-function showMovies() {
-  container.innerHTML = moviesHtml.join("");
-}
+//function showMovies() {
+ // container.innerHTML = moviesHtml.join("");
+//}
 function showCharacters() {
   container.innerHTML = charactersHtml.join("");
 }
@@ -114,7 +116,49 @@ function showGhibliMatch() {
 }
 
 setData();
-showMovies();
+//showMovies();
 
 // SORT FUNCTION
+const moviesHtml = [];
+const sortByTitleBtn = document.getElementById("sortByT");
+let option = document.getElementById("option");
+let titleOrdered;
 
+const orderedByTitle = moviesData.sort(function(a, b) {
+  if (a.title.toLowerCase() < b.title.toLowerCase()
+  ) return -1;
+  if(a.title.toLowerCase() > b.title.toLowerCase()
+  ) return 1;
+  return 0;
+});
+
+titleOrdered = orderedByTitle;
+console.log(titleOrdered);
+
+function setOrderedData() {
+  for (let j = 0; j < orderedByTitle.length; j++) {
+    moviesHtml.push(`
+        <div class="card">
+          <img
+            src="${orderedByTitle[j].poster}"
+            alt=""
+          />
+          <div class="cardText">
+            <h2 class="filmTitle">${orderedByTitle[j].title}</h2>
+            <p class="directorAndProducer">Director: ${orderedByTitle[j].director} | Producer: ${orderedByTitle[j].director}</p>
+            <h5 class="releaseDate">${orderedByTitle[j].release_date}</h5>
+            <p class="filmDescription">${orderedByTitle[j].description}
+            </p>
+          </div>
+        </div>
+        
+    `);}
+     }
+
+     function showOrderedMovies() { 
+      container.innerHTML = moviesHtml.join("");}
+
+// Trying 2 show it
+
+  setOrderedData();
+  showOrderedMovies();
